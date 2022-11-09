@@ -1,5 +1,12 @@
+body{
+    font-family: 'helvetica', 'arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    color:antiquewhite;
+}
+
 .left{
-    background-color:bisque;
+    background-color:rgb(56, 54, 51);
     position: fixed;
     width: 50%;
     height: 100%;
@@ -8,33 +15,12 @@
 }
 
 .right{
-    background-color:rgb(36, 92, 78);
+    background-color:rgb(255, 255, 255);
     position: fixed;
     width: 50%;
     height: 100%;
     top: 0;
     right: 0;
-}
-
-.rocket{
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    width: 20px;
-    height: 100px;
-    background-color: rgb(193, 193, 212);
-    transition: bottom 10000ms;
-}
-
-
-
-body.body-state3 .rocket,
-body.body-state4 .rocket{
-    bottom: 1000px;
-}
-
-body.body-state1 .rocket{
-    transition: none;
 }
 
 .ground{
@@ -45,6 +31,69 @@ body.body-state1 .rocket{
     width: 100%;
     height: 20px;
 }
+
+.nervous{
+	position: absolute;
+	bottom: 100px;
+	left: 80%;
+	background: url('../img/im-nervous.png') no-repeat 0 0;
+	width: 250px;
+	height: 282px;
+	margin-left: -180px;
+	display: none;
+}
+.nervous.show{
+	display: block;
+}
+
+.moon{
+	position: absolute;
+	bottom: 100px;
+	left: 10%;
+	background: url('../img/to-the-moon.png') no-repeat 0 0;
+	width: 250px;
+	height: 282px;
+	display: none;
+}
+.moon.show{
+	display: block;
+}
+
+.rocket{
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    width: 250px;
+    height: 281px;
+    margin-left: -125px;
+    background: url('../img/rocket-state1.png') no-repeat 0 0;
+    transition: bottom 10000ms;
+}
+
+/* rocket bg image */
+body.body-state2 .rocket{
+    background: url('../img/rocket-state2.gif');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+    background: url('../img/rocket-state3-4.gif');
+}
+body.body-state5 .rocket{
+    background: url('../img/rocket-state5.png');
+
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+    bottom: 1000px;
+}
+
+body.body-state1 .rocket{
+    transition: none;
+}
+
+
 
 .state1,
 .state2,
@@ -60,11 +109,45 @@ body.body-state3 .state3{display: block;}
 body.body-state4 .state4{display: block;}
 body.body-state5 .state5{display: block;}
 
-a{
-
-}
-
 a.button{
-
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: color 300ms;
 }
 
+.body-state1 a:hover {
+    color:antiquewhite;
+    background-color: rgb(16, 124, 48);
+    font-weight: bold;
+}
+
+.body-state2 a.button{
+    color:antiquewhite;
+    background-color: rgb(124, 16, 16);
+    font-weight: bold;
+}
+
+.body-state4 a.button{
+    color:rgb(248, 248, 248);
+    background-color:rgb(95, 95, 95);
+}
+
+.body-state4 a.hover{
+    color:rgb(248, 248, 248);
+    background-color:rgb(16, 124, 48);
+}
+
+.body-state5 a.button{
+    color:rgb(248, 248, 248);
+    background-color:rgb(95, 95, 95);
+}
+
+.body-state5 a.hover{
+    color:rgb(248, 248, 248);
+    background-color:rgb(16, 124, 48);
+}

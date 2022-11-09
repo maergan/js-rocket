@@ -2,7 +2,7 @@ var timer = null;
 var countdownNumber = 10;
 
 var changeState = function (state) {
-    document.body.className = 'body-state' +state; 
+    document.body.className = 'body-state'+state; 
     clearInterval(timer);
     countdownNumber = 10;
     document.getElementById('countdown').innerHTML = countdownNumber;
@@ -13,6 +13,19 @@ var changeState = function (state) {
             countdownNumber = countdownNumber - 1;
             document.getElementById('countdown').innerHTML = countdownNumber;
             
+            if (countdownNumber > 3 && countdownNumber <= 5) {
+				// be nervous
+				document.getElementById('nervous').className = 'nervous show';
+			} else{
+				document.getElementById('nervous').className = 'nervous';
+			}
+
+			if (countdownNumber > 6 && countdownNumber <= 8) {
+				// to the moon
+				document.getElementById('moon').className = 'moon show';
+			} else {
+				document.getElementById('moon').className = 'moon';
+			}
         
         if (countdownNumber <= 0){
             changeState(3);
@@ -24,7 +37,7 @@ var changeState = function (state) {
             var randomNumber = Math.round(Math.random()*10);
             console.log('randomNumber:', randomNumber)
             //success
-            if (randomNumber > 5) {
+            if (randomNumber > 9) {
                 changeState(4);
             }
             //failure
