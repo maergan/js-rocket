@@ -40,7 +40,7 @@ body{
 	background: url('../img/im-nervous.png') no-repeat 0 0;
 	width: 250px;
 	height: 282px;
-	margin-left: -180px;
+	margin-left: -250px;
 	display: none;
 }
 .nervous.show{
@@ -50,7 +50,7 @@ body{
 .moon{
 	position: absolute;
 	bottom: 100px;
-	left: 10%;
+	left: 20%;
 	background: url('../img/to-the-moon.png') no-repeat 0 0;
 	width: 250px;
 	height: 282px;
@@ -160,7 +160,6 @@ a.button{
 }
 
 .vertical-center {
-
-  position: relative;
+    position: relative;
   top: 40%;
 }
